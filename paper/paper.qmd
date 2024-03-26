@@ -1,0 +1,77 @@
+---
+title: "Analysing the Religions of Holocaust Victims"
+author: 
+  - Aryaman Suri
+thanks: "Code and data are available at: https://github.com/aryamansuri/Holocaust-Victims"
+date: today
+date-format: long
+format: pdf
+number-sections: true
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(dplyr)
+library(tidyverse)
+library(here)
+library(knitr)
+library(tinytex)
+library(janitor)
+```
+
+```{r}
+#| echo: false
+#| include: true
+#| message: false
+
+## Read the data
+raw_data <-
+  read_csv(here("Data/raw_data/raw_data.csv"))
+  show_col_types = FALSE
+  
+clean_data <-
+  read_csv(here("Data/analysis_data/cleaned_data.csv"))
+  show_col_types = FALSE
+```
+
+# **Introduction:**
+
+The Holocaust stands as one of the darkest chapters in human history, marked by the systematic persecution and extermination of millions of innocent lives. Among the most infamous sites of this tragedy is Auschwitz, a concentration and extermination camp where over one million people, predominantly Jews, were murdered by the Nazis during World War II. In an effort to shed light on this harrowing history, this project endeavors to explore religions of those victims.
+
+# **Data:**
+
+Just as data sets have played a crucial role in understanding the trans-Atlantic slave trade (reference1), they are equally essential in comprehending the magnitude of the Holocaust. By meticulously collecting and analyzing data related to Auschwitz victims, I aim to uncover insights into the demographics of those who suffered and perished in the camp.
+
+## Raw Data
+
+We get the raw data from the United States Holocaust Memorial Museum website (reference2). This data includes the first names, last names, dates of birth and death and religion of the victims. We store this data in a raw data csv.
+
+
+
+## Cleaning Data
+
+Since we are only interested in the religions of the victims for this project, we cleaned the data using count() and obtained a table with two columns. The first column is the religion of the victims, and the second column contains the count of the respective religion, in terms of victims.
+
+# **Evolution of Research:**
+
+Similar to the evolution of research on the trans-Atlantic slave trade, our project builds upon decades of scholarly inquiry and data compilation. We recognize the importance of leveraging advancements in technology and methodologies to enhance our understanding of the Holocaust and its lasting impact on humanity.
+
+# **Accessibility and Impact:**
+
+Our project is committed to making this information accessible to researchers, educators, and the public. By digitizing and disseminating data through interactive platforms, we seek to facilitate deeper engagement with the history of the Holocaust and honor the memory of its victims.
+
+# **Ethical Considerations:**
+
+We acknowledge the ethical considerations inherent in studying such a sensitive topic. As we delve into the stories of Auschwitz victims, we are mindful of the need to approach this subject with sensitivity, empathy, and respect for the dignity of those who endured unimaginable suffering.
+
+# **Continued Relevance:**
+
+Despite the passage of time, the study of the Holocaust remains as relevant as ever. Through our project, we seek to honor the memory of the victims, educate future generations about the atrocities of genocide, and reaffirm our commitment to never forget the lessons of history.
+
+# **Conclusion:**
+
+In conclusion, our Auschwitz Victims project embodies a commitment to preserving the memory of those who perished in one of the darkest periods of human history. By harnessing the power of data analysis, we endeavor to shed light on the experiences of Holocaust victims and ensure that their stories are never forgotten.
